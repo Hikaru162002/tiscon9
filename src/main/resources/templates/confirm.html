@@ -26,7 +26,18 @@
       この内容でお見積りする場合は、「概算お見積もりをする」ボタンを押してください。
     </div>
     <ul th:if="${#fields.hasErrors('all')}">
-      <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
+      
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('all')} ? 'has-error'">
+        <input type="text" class="form-control"
+                th:field="*{all}" />
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('all')}"
+          th:errors="*{all}">
+        </span>
+        <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
+      </div>
+
     </ul>
     <div class="col-sm-12">
       <div class="sub-title">お客様情報</div>
