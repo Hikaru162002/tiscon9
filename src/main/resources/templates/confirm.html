@@ -29,8 +29,6 @@
       
       <div class="form-group"
           th:classappend="${#fields.hasErrors('all')} ? 'has-error'">
-        <input type="text" class="form-control"
-                th:field="*{all}" />
         <li class="text-danger"
           th:if="${#fields.hasErrors('all')}"
           th:errors="*{all}">
