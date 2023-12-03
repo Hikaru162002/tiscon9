@@ -31,11 +31,11 @@
           th:classappend="${#fields.hasErrors('all')} ? 'has-error'">
         <input type="text" class="form-control"
                 th:field="*{all}" />
-        <span class="text-danger"
+        <li class="text-danger"
           th:if="${#fields.hasErrors('all')}"
           th:errors="*{all}">
-        </span>
-        <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
+        </li>
+        <!-- <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li> -->
       </div>
 
     </ul>
