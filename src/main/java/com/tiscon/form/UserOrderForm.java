@@ -36,9 +36,8 @@ public class UserOrderForm {
     @NotBlank
     private String newAddress;
 
-    @Numeric
     @NotBlank
-    private String month;
+    private String months;
 
     @Numeric
     @NotBlank
@@ -115,12 +114,12 @@ public class UserOrderForm {
         this.newAddress = newAddress;
     }
 
-    public String getMonth() {
-        return month;
+    public String getMonths() {
+        return months;
     }
 
-    public void setMonth(String month) {
-        this.month = month;
+    public void setMonths(String months) {
+        this.months = months;
     }
 
     public String getBox() {

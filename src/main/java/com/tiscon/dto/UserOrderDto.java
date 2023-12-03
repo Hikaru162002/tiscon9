@@ -16,7 +16,7 @@ public class UserOrderDto {
 
     private String newAddress;
 
-    private String month;
+    private String months;
 
     private String box;
 
@@ -84,12 +84,12 @@ public class UserOrderDto {
         this.newAddress = newAddress;
     }
 
-    public int getMonth() {
-        return Integer.parseInt(month);
+    public int getMonths() {
+        return Integer.parseInt(months);
     }
 
-    public void setMonth(String month) {
-        this.month = month;
+    public void setMonths(String months) {
+        this.months = months;
     }
 
     public int getBox() {
