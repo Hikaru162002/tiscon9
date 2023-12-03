@@ -25,20 +25,26 @@
       入力内容をご確認ください。<br/>
       この内容でお見積りする場合は、「概算お見積もりをする」ボタンを押してください。
     </div>
-    <ul th:if="${#fields.hasErrors('all')}">
-      
-      <div class="form-group"
-          th:classappend="${#fields.hasErrors('all')} ? 'has-error'">
-        <li class="text-danger"
-          th:if="${#fields.hasErrors('all')}"
-          th:errors="*{all}">
-        </li>
-        <!-- <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li> -->
-      </div>
 
-    </ul>
     <div class="col-sm-12">
       <div class="sub-title">お客様情報</div>
+
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('customerName')} ? 'has-error'">
+        <span class="text-danger" 
+          th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('tel')} ? 'has-error'">
+        <span class="text-danger" 
+          th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('email')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+      </div>
+
       <table class="table table-bordered">
         <col span="1" style="background-color: rgb(221, 222, 219);">
         <col span="2" style="background-color: #FFFFFF;">
@@ -65,6 +71,28 @@
     </div>
     <div class="col-sm-12">
       <div class="sub-title">集荷元・お届け先</div>
+
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('oldPrefectureId')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('oldPrefectureId')}" th:errors="*{oldPrefectureId}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('oldAddress')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('oldAddress')}" th:errors="*{oldAddress}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('newPrefectureId')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('newPrefectureId')}" th:errors="*{newPrefectureId}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('newAddress')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('newAddress')}" th:errors="*{newAddress}"></span>
+      </div>
+
       <table class="table table-bordered">
         <col span="1" style="background-color: rgb(221, 222, 219);">
         <col span="2" style="background-color: #FFFFFF;">
@@ -96,6 +124,7 @@
         </tbody>
       </table>
     </div>
+
     <div class="col-sm-12">
       <div class="sub-title">引越し予定月</div>
     　　　　<table class="table table-bordered">
@@ -112,6 +141,33 @@
     </div>
     <div class="col-sm-12">
       <div class="sub-title">お荷物情報</div>
+
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('box')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('box')}" th:errors="*{box}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('bicycle')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('bicycle')}" th:errors="*{bicycle}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('bed')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('bed')}" th:errors="*{bed}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('washingMachine')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('washingMachine')}" th:errors="*{washingMachine}"></span>
+      </div>
+      <div class="form-group"
+          th:classappend="${#fields.hasErrors('washingMachineInstallation')} ? 'has-error'">
+        <span class="text-danger"
+          th:if="${#fields.hasErrors('washingMachineInstallation')}" th:errors="*{washingMachineInstallation}"></span>
+      </div>
+
         <table class="table table-bordered">
           <col span="1" style="background-color: rgb(221, 222, 219);">
           <col span="2" style="background-color: #FFFFFF;">
