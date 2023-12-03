@@ -78,14 +78,14 @@
       </table>
       <div class="col-sm-12">
         <div class="sub-title">引越し予定月</div>
-      　　　　<table class="table table-bordered">
-        　　　　<col span="1" style="background-color: rgb(221, 222, 219);">
+        <table class="table table-bordered">
+          <col span="1" style="background-color: rgb(221, 222, 219);">
           <col span="2" style="background-color: #ffffff;">
           <tbody>
            <tr>
             <th style="width: 40%">予定月</th>
             <td><span th:text="*{months}"></span></td>
-            <input type="hidden" name="months id="months th:value="*{months}"/>
+            <input type="hidden" name="months" id="months" th:value="*{months}"/>
            </tr>
           </tbody>
         </table>
@@ -124,7 +124,7 @@
       </table>
       <div class="form-group">
         <div class="text-center">
-          <button type="submit" name="backToConfirm" class="btn-back">TOPへ戻る</button>
+          <button type="submit" name="backToConfirm" class="btn-back">確認画面へ戻る</button>
         </div>
       </div>
     </div>
